@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "DM Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  transition: background-color 0.8s ease;
+}
+
+@keyframes pulse-ring {
+  0%   { transform: scale(0.95); opacity: 0.8; }
+  70%  { transform: scale(1.1);  opacity: 0.2; }
+  100% { transform: scale(0.95); opacity: 0;   }
+}
+.pulse-ring { animation: pulse-ring 1.4s ease-out infinite; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+.fade-up { animation: fade-up 0.4s ease forwards; }
+
+.font-mono-dm { font-family: "DM Mono", monospace; }
